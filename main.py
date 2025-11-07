@@ -10,8 +10,7 @@ app = Flask(__name__)
 app.config["SECRET_KEY"] = "qwertymnbvcxz"
 
 # Initialize SocketIO for real-time communication
-socketio = SocketIO(app)
-
+socketio = SocketIO(app, async_mode='threading')
 # Store active chat rooms and their messages
 rooms = {}
 
